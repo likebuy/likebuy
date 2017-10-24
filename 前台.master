@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="前台.master.cs" Inherits="前台" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>LIKEBUY</title>
+    <style type="text/css">
+<!--
+body {
+	font-size: 10pt;
+}
+a:link {
+	color: #333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333;
+}
+a:hover {
+	text-decoration: none;
+	color: #CCC;
+}
+a:active {
+	text-decoration: none;
+	color: #00F;
+}
+
+        .style1
+        {
+            height: 142px;
+        }
+
+        .style2
+        {
+            width: 798px;
+            height: 177px;
+        }
+        .style3
+        {
+            width: 794px;
+            height: 177px;
+        }
+
+        .style4
+        {
+            width: 100%;
+        }
+        .style5
+        {
+            height: 126px;
+        }
+        .style6
+        {
+            width: 791px;
+            height: 140px;
+        }
+        .style7
+        {
+            height: 78px;
+        }
+
+        .style8
+        {
+            height: 28px;
+        }
+
+-->
+</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<form id="form1" runat="server">
+<!-- Save for Web Slices (computer.psd) -->
+<table width="0" border="1" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table id="___01" width="798" height="756" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2">
+            <img class="style2" src="images/2017072840501125.jpg" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="style1">
+            <table class="style4">
+                <tr>
+                    <td class="style5">
+                        <img class="style6" src="images/logo002.jpg" /></td>
+                </tr>
+                <tr>
+                    <td align="center" class="style7" bgcolor="White">
+                        <asp:Label ID="lbladv" runat="server" Font-Size="25pt" Height="42px" 
+                            style="margin-top: 0px" Width="786px" BackColor="White" 
+                            ForeColor="#FF6600"></asp:Label>
+                        <asp:SqlDataSource ID="SqlDataSource_ad" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:ConnectionStringMyDB %>" 
+                            DataSourceMode="DataReader" SelectCommand="SELECT * FROM [跑馬燈]">
+                        </asp:SqlDataSource>
+                    </td>
+                </tr>
+            </table>
+          </td>
+      </tr>
+      <tr>
+        <td width="170" rowspan="2" valign="top">
+            <asp:Panel ID="PanelMemberLogout" runat="server">
+                <table width="90%" border="0" align="center" cellpadding="7" cellspacing="1">
+                    <tr>
+                        <td>
+                            &nbsp;<a href="Default.aspx">找生鮮</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;<a href="Member_Add.aspx">會員註冊</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;<a href="Login.aspx">登入系統</a></td>
+                    </tr>
+                </table>
+            </asp:Panel>
+            <asp:Panel ID="PanelMemberLogin" runat="server">
+                <table width="90%" border="0" align="center" cellpadding="7" cellspacing="1">
+                    <tr>
+                        <td>
+                            &nbsp;<asp:LinkButton ID="btnMemberLogout" runat="server" CausesValidation="False" 
+                                onclick="btnMemberLogout_Click">登出系統</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;<a href="Member_Update.aspx">資料修改</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;<a href="Default.aspx">產品資料</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;<a href="Member_ShoppingCar.aspx">購物清單</a></td>
+                    </tr>
+                    <tr>
+                        <td class="style8">
+                            &nbsp;<a href="Member_Orders.aspx">訂單資料</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="Member_feedback" runat="server" 
+                                onclick="Member_feedback_Click" CausesValidation="False">客服回報</asp:LinkButton>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <asp:LinkButton ID="Member_FeedbackSelect" runat="server" 
+                                onclick="Member_FeedbackSelect_Click" CausesValidation="False">客服回報進度查詢</asp:LinkButton>
+                        </td>
+                    </tr>
+
+                </table>
+            </asp:Panel>
+            <p>
+            </p></td>
+      </tr>
+      <tr>
+        <td height="335" valign="top" width="628" align="center">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+          </td>
+      </tr>
+      <tr>
+        <td height="37" background="images/index_06.jpg" colspan="2"><table width="0" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+                <img class="style3" src="images/tropical-fruit.jpg" /></td>
+          </tr>
+        </table></td>
+      </tr>
+      </table></td>
+  </tr>
+</table>
+<!-- End Save for Web Slices -->
+</form>
+</body>
+</html>
